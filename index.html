@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting Server Minecraft</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="partner1.png" alt="BGH Logo" class="bgh-icon">
+        <div class="logo">
+            <h1>Bocca Gigante Hosting | BGH | Hosting per server Minecraft</h1>
+            <h2>BETA</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#packages">Servizi</a></li>
+                <li><a href="#">Carrello</a></li>
+                <li><a href="#">Contatti</a></li>
+                <li><a href="#faq-item">FAQ</a></li>
+                <section class="search-bar">
+                    <input type="text" placeholder="Cerca nel sito..." id="search-input">
+                    <button onclick="searchFunction()">Cerca</button>
+                </section>
+                
+
+                
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sezione Video -->
+    <section class="video-section">
+        <div class="video-overlay">
+            <h2>Guarda come funziona il nostro hosting Minecraft</h2>
+            <p>Scopri la potenza e l'affidabilità del nostro servizio di hosting con questo video dimostrativo.</p>
+        </div>
+        <video autoplay muted loop id="bg-video">
+            <source src="video-demo.mp4" type="video/mp4">
+            Il tuo browser non supporta i video HTML5.
+        </video>
+    </section>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Benvenuto nello Spazio del Gaming!</h2>
+            <p>Hosta il tuo server Minecraft in un ambiente sicuro e potente, pronto a fare esplodere la tua creatività!</p>
+            <a href="#packages" class="cta">Scopri i nostri pacchetti</a>
+        </div>
+    </section>
+
+    
+    <section id="packages" class="packages">
+        <h2>Pacchetti di Hosting</h2>
+        <div class="package" data-price="9.99">
+            <h3>Pacchetto Base</h3>
+            <p>Perfetto per partite casuali e giochi leggeri.</p>
+            <button class="add-to-cart">Aggiungi al carrello</button>
+        </div>
+        <div class="package" data-price="19.99">
+            <h3>Pacchetto Premium</h3>
+            <p>Per server più grandi e prestazioni superiori.</p>
+            <button class="add-to-cart">Aggiungi al carrello</button>
+        </div>
+        <div class="package" data-price="29.99">
+            <h3>Pacchetto Pro</h3>
+            <p>Per esperienze di gioco eccezionali e server ultra-performanti.</p>
+            <button class="add-to-cart">Aggiungi al carrello</button>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Cosa dicono i nostri clienti</h2>
+        <div class="testimonial">
+            <p>"Minecraft Hosting ha reso il nostro server incredibilmente veloce e sicuro. Non potremmo chiedere di meglio!"</p>
+            <span>- Luca, Admin Server</span>
+        </div>
+        <div class="testimonial">
+            <p>"Servizio eccellente! Alta disponibilità e prestazioni costanti. Consigliatissimo!"</p>
+            <span>- Sara, Player</span>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>Domande Frequenti</h2>
+        <div class="faq-item">
+            <h3>Quanto tempo ci vuole per configurare il mio server?</h3>
+            <p>La configurazione richiede pochi minuti, e il nostro team è sempre disponibile per assistenza immediata!</p>
+        </div>
+        <div class="faq-item">
+            <h3>Posso cambiare pacchetto in qualsiasi momento?</h3>
+            <p>Sì, puoi aggiornare o downgrade del tuo pacchetto in qualsiasi momento direttamente dal tuo pannello di controllo.</p>
+        </div>
+    </section>
+
+    <div id="cart" class="cart">
+        <h2>Carrello</h2>
+        <ul id="cart-items"></ul>
+        <p id="total">Totale: €0.00</p>
+        <button id="checkout">Vai al pagamento</button>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Minecraft Hosting. Tutti i diritti riservati.</p>
+            <ul>
+                <li><a href="Privacy.html">Privacy</a></li>
+                <li><a href="#">Termini di Servizio</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <footer>
+        <div class="footer-content">
+            <p>Info.</p>
+            <li><a href="mailto:boccagigantetv@gmail.com" >Mail</a></li>
+            <li><a href="#">Youtube</a></li>
+        </div>
+    </footer>
+    <footer>
+    <section id="partners" class="partners">
+        <h2>I nostri partner</h2>
+        <div class="partner-logos">
+            <a href="https://boccagigantetv.github.io/">
+            <img src="partner1.png" alt="Partner 1">
+            <h6>Bocca Gigante Productions</h6>
+        </a>
+            <img src="partner2.png" alt="Partner 2">
+            <img src="partner3.png" alt="Partner 3">
+        </div>
+    </section>
+</footer>
+    <script>
+        function searchFunction() {
+            let query = document.getElementById("search-input").value;
+            alert("Cercando: " + query); // Funzione di ricerca base
+        }
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>

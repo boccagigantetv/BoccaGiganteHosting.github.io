@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #000);
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #111;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+header .logo h1 {
+    font-size: 32px;
+    color: #00bcd4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00bcd4;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+header nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.hero {
+    background: url('space-bg.jpg') no-repeat center center/cover;
+    padding: 150px 20px;
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 2s;
+    position: relative;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero h2 {
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.cta {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #00bcd4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #0097a7;
+}
+
+.packages {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #222;
+}
+
+.packages h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.package {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.package h3 {
+    color: #00bcd4;
+}
+
+.package button {
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.package button:hover {
+    background-color: #0097a7;
+}
+
+.package:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.testimonials {
+    background-color: #333;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.testimonial {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.testimonial p {
+    font-size: 20px;
+    color: #fff;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #00bcd4;
+}
+
+.faq {
+    padding: 50px 20px;
+    background-color: #444;
+    color: #fff;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 24px;
+    color: #00bcd4;
+}
+
+.faq-item p {
+    font-size: 18px;
+}
+
+.cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 100;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 10px 0;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+}
+
+#checkout {
+    padding: 15px 30px;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkout:hover {
+    background-color: #0097a7;
+}
+
+footer {
+    background-color: #111;
+    padding: 40px 0;
+    text-align: center;
+    color: #fff;
+}
+
+footer .footer-content ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+footer .footer-content ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .footer-content ul li a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-size: 18px;
+}
+/* Sezione video */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 400px;  /* Imposta l'altezza della sezione */
+    overflow: hidden;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Fai in modo che il video copra tutta l'area */
+    z-index: -1; /* Posiziona il video dietro al contenuto */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Aggiungi un overlay scuro per migliorare la leggibilità */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.video-overlay h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.video-overlay p {
+    font-size: 18px;
+}
+.package {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package:hover {
+    transform: scale(1.05); /* Ingigantisce leggermente il pacchetto */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra per evidenziare */
+}
+
+.cta {
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #0098b5; /* Cambia il colore al passaggio del mouse */
+}
+
+.cta {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.cta:hover {
+    background-color: #00a3c3;
+}
+/* Stili per il logo */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    position: relative; /* Necessario per posizionare l'immagine assolutamente */
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Posiziona l'icona in alto a destra */
+.bgh-icon {
+    position: absolute;
+    top: 20px;  /* Distanza dal bordo superiore */
+    right: 20px; /* Distanza dal bordo destro */
+    width: 50px;  /* Imposta la larghezza dell'icona */
+    height: auto; /* Mantieni le proporzioni dell'immagine */
+}
+
+/* Stile per il menu di navigazione */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
